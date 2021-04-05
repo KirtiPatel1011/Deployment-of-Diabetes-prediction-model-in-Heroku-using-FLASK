@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+<body>
+
+    
+     <!-- Website Title -->
+    	<div class="container-fluid text-center bg-secondary text-white">
+            <h2 class="font-italic">Diabetics Prediction</h2>
+       <p class="font-italic">A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+     
+         </div>
+      
+          
+      <div class="container-fluid my-3 ">
+           <div class="row">
+               <div class="col"></div>
+               <div class="col text-center bg-dark text-white p-2">
+             
+    
+
+                
+                   
+              <form action="{{ url_for('predict')}}"method="post" >
+    
+
+                <div class="form-group">
+                   <input class="form-control" type="text" name="pregnancies" placeholder="Number of Pregnancies "><br>
+                   <input class="form-control" type="text" name="glucose" placeholder="Glucose (mg/dL) "><br>
+                   <input class="form-control" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) "><br>
+                   <input class="form-control" type="text" name="skinthickness" placeholder="Skin Thickness (mm) "><br>
+                   <input class="form-control" type="text" name="insulin" placeholder="Insulin Level (IU/mL) "><br>
+                   <input class="form-control" type="text" name="bmi" placeholder="Body Mass Index "><br>
+                   <input class="form-control" type="text" name="dpf" placeholder="Diabetes Pedigree Function"><br>
+                    <input class="form-control" type="text" name="age" placeholder="Age (years)"><br>
+
+                   <input type="submit" class=" btn btn-outline-light" value="Predict">
+                </div>
+                
+             
+               </form>
+                
+
+               
+              </div>
+              <div class="col"></div>
+           </div>
+        </div>
+
+        
+    </body>
+</html>

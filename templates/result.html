@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+       
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                
+    </head>
+
+<body>
+
+
+
+   <div class="container-fluid">
+  
+     <div class="card">
+      <div class="card-header">
+    
+    
+    <div class="container-fluid text-center bg-secondary text-white p-3">
+             <h1 class="font-italic">Diabetics Prediction</h1>
+  
+         </div>
+      
+    </div>
+    <div class="card-body">
+    
+     <div class="container-fluid text-center" >
+			{% if prediction==1 %}
+				<h1 class="text-danger">Prediction: Oops! You have DIABETES.</h1>
+				<img src="{{ url_for('static', filename='diabetes.png') }}" class="img-fluid" alt="Diabetes Image" width="460" height="100">
+			{% elif prediction==0 %}
+				<h1 class="text-success">Prediction:Great! You DON'T have diabetes.</h1>
+				<img src="{{ url_for('static', filename='celebration-time.jpg') }}" class="img-fluid" alt="Not Diabetes Image" width="460" height="150">
+			{% endif %}
+		     </div>
+    
+    </div> 
+    <div class="card-footer">
+    
+        <div class="container-fluid text-center bg-secondary text-white p-3">
+            <a href="https://www.linkedin.com/in/kirti-patel-6b8ab5165" class="fa fa-linkedin"></a>
+            <p class="font-italic">A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+         </div>
+    </div>
+  </div>
+</div>
+
+
+          
+  </body>
+          
+</html>
